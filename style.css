@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #34495e;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.accordion {
+  width: 90%; /*90% of container elements width*/
+  max-width: 1000px; /*max width allowed 1000px*/
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background: white;
+  color: #111;
+  margin: 1rem 0rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+}
+
+.accordion-item-header {
+padding: .5rem 3rem .5rem 1rem;
+min-height: 3.5rem;
+line-height: 1.25rem;
+font-weight: bold;
+displaY: flex;
+align-items: center;
+position: relative;
+cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: '\002B';
+  font-size: 2rem;
+  position: absolute; /*changes position of plus sign to far left*/
+  right: 1rem; 
+}
+
+.accordion-item-header.active::after {
+  content: '\2212';
+}
