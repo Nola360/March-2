@@ -47,9 +47,31 @@ cursor: pointer;
   content: '\002B';
   font-size: 2rem;
   position: absolute; /*changes position of plus sign to far left*/
-  right: 1rem; 
+  right: 1rem;
+  transition: transform 0.4s ease-in-out; 
 }
 
 .accordion-item-header.active::after {
   content: '\2212';
+  transform: rotate(180deg);
+}
+
+.accordion-item-body {
+  max-height: 0; /*hides body*/
+  overflow: hidden;
+  transition: max-height .4s ease-in-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 16px;;
+  border-top: 3px solid #34495e;
+  border-image: linear-gradient(to right, #34495e, transparent) 1; /*fades border line*/
+  
+}
+
+@media(max-width: 767px) {
+   html { /*Only changes the root font sizew*/
+     font-size: 14px;
+   }
 }
