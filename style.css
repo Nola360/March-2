@@ -53,7 +53,7 @@ cursor: pointer;
 
 .accordion-item-header.active::after {
   content: '\2212';
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .accordion-item-body {
